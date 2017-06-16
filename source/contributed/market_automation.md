@@ -36,13 +36,17 @@ Lets replace this with a safer method;
 ```javascript
 // A wrapper that adds a check for accidentally swapping an order's price and amount around
 Game.market.prototype.createOrderSafe = function(orderType, resource, price, totalAmount, roomName) {
-    if (totalAmount < price) {
-        console.log(`You attempted to sell ${totalAmount} of ${resource} at ${price}c!`);
-        return
+    if (totalAmount > price && resource === SUBSCRIPTION_TOKEN) {
+        console.log(`You attempted to sell ${totalAmount} tokens @ ${price}c!`);
+        return;
     }
-    
+
+    if (totalAmount < price) {
+        console.log(`You attempted to sell ${totalAmount} of ${resource} @ ${price}c!`);
+        return;
+    }
+
     return Game.market.createOrder(orderType, resource, price, totalAmount, roomName);
-    
 }
 ```
 
