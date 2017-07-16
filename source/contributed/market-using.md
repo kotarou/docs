@@ -3,16 +3,19 @@ title: Using the Screeps Market and choosing prices
 contributed:
     name: kotarou
     link: https://github.com/kotarou
-    date: TODO
+    date: 2017-06-16
 ---
 
-Interacting with the market in Screeps is a great way to improve your economy, but it can be overhwelming to get started. There are also many mistakes and inefficiences to be avoided in order to maximise your profits. This article assumes that you already know how to use `Game.market.createOrder()` and `Game.market.deal()` to interact with the market, and you already have some credits. For basic market information, or if you do not yet know how to do this, see the article [here](http://docs.screeps.com/market.html).
+Interacting with the market in Screeps is a great way to improve your economy, but it can be overhwelming to get started.
 
-This article discusses some basic theory in how to make effective market decisions, as well as why you should even bother. 
+This article discusses some basic theory in how to make effective market decisions, as well as outlining some reasons for interacting with the market.
+
+This article assumes that you already know how to use functions like `Game.market.createOrder()` and `Game.market.deal()` to interact with the market, and that you already have some credits. For basic market information, or if you do not yet know how to do this, see the article [here](http://docs.screeps.com/market.html).
+
 
 ## Why use the market?
 
-Any player who has a room at or above RCL 6 should consider using the market:
+Any player who has a room at or above RCL 6 should consider using the market, as it can improve your empire in multiple ways:
 
 ### Economics:
 - If you have labs and lab code working, you can purchase minerals that you would otherwise lack access to in order to run reactions.
@@ -20,7 +23,7 @@ Any player who has a room at or above RCL 6 should consider using the market:
 
 ### Safety:
 - Credits are not lost when you respawn, so selling resources guarantees you don't "lose it all" when attacked.
-- You can buy boosts from RCL 6 and use them to fight bigger players near you, or expand faster.
+- You can buy boosts use them to fight bigger players near you, or expand faster.
 - Using credits to buy boosts guarantees you have them when you need them, instead of wiating for lab reactions.
 
 ### Subscription tokens
@@ -29,7 +32,7 @@ Any player who has a room at or above RCL 6 should consider using the market:
 ### Flexibility
 - You can convert a credit into whatever you need at the time, rather than having stockpiles of useless resource you don't use.
 
-## How to effectively use the market.
+## Using the market effectively
 
 When interacting with a virtual economy, such as the Screeps market, there are two things to consider:
 
@@ -41,7 +44,7 @@ Screeps also adds two costs to dealing with the market:
 1) The player that invokes `Game.market.createOrder()` will incurr a fee of 5% of the total transaction amount possible within the order - even if no deal occurs!
 2) The player who executes `Game.market.deal()` will pay the energy cost to transfer the resources, regardless of whether they are a buyer or seller.
 
-### When to `createOrder` and when to `deal`
+### Making an order vs dealing
 
 If you are new to the markets, and do not have many credits, you will have to begin trading by fufilling other players' buy orders.
 
@@ -115,7 +118,7 @@ The useful thing about this pricing strategy is that it is self-balancing. If th
 
 If you are situated in the far regions of the map, your local market acitivty will likely be slower than players in the central regions, as neighbouring players will be less established. You may consider undercutting the wall by 0.02 instead, to reflect the maximal 0.01 energy per unit resource transfer cost.
 
-## Choosing a buy price
+## Selecting a buy price
 
 This is basically the same as choosing a sell price. However, theres no real issue in overpricing this market - players automatially interact less with the buy market than the sell market, so you are less likely to see a cascade of scripts overcutting in this market. however, **Always keep distribution costs in mind**. 
 

@@ -3,7 +3,7 @@ title: From manual to automatic marketing
 contributed:
     name: kotarou
     link: https://github.com/kotarou
-    date: TODO
+    date: 2017-06-16
 ---
 
 Interacting with the market in Screeps is a great way to improve your economy, but it can be difficult to get started with. This article assumes that you already know how to use `Game.market.createOrder` and `Game.market.deal` to interact with the market, and you already have some credits. For basic market information, or if you do not yet know how to do this, see the article [here](http://docs.screeps.com/market.html).
